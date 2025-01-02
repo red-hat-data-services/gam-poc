@@ -1,4 +1,4 @@
-name: Test Trigger From GH CLI
+name: Test Trigger Using GH CLI
 
 run-name: GAM Trigger - ${{ inputs.component }}-${{ inputs.workflow_run_id }}
 
