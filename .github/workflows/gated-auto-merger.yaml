@@ -10,7 +10,7 @@ on:
         description: select component
         options:
           - Dashboard
-      workflow_run_id:
+      id:
         description: 'Execution ID (default is current date and time)'
         default: "12345"
         required: false
