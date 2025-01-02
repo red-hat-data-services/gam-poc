@@ -1,6 +1,6 @@
 name: Test Trigger Using GH CLI
 
-run-name: GAM Trigger - ${{ inputs.component }}-${{ inputs.workflow_run_id }}
+run-name: GAM Trigger - ${{ inputs.component }}-${{ inputs.id }}
 
 on:
   workflow_dispatch:
@@ -36,5 +36,5 @@ jobs:
         run: |
           echo "Hello, this is a workflow triggered by workflow_dispatch!"
           echo "Component: ${{ inputs.component }}"
-          echo "Workflow Run ID: ${{ inputs.workflow_run_id }}"
+          echo "Workflow Run ID: ${{ inputs.id }}"
 
