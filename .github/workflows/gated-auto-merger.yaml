@@ -13,11 +13,11 @@ on:
         required: true
       gam_trigger_repository:
         description: 'Github Repository from which this workflow is triggered (default is current date and time)'
-        default: "12345"
+        default: "$GITHUB_REPOSITORY"
         required: true
       gam_trigger_run_id:
         description: 'Workflow Run ID of the Trigger Workflow (default is current date and time)'
-        default: "12345"
+        default: "$GITHUB_RUN_ID"
         required: true
         
 
@@ -39,10 +39,6 @@ jobs:
 
       - name: Print a message
         run: |
-          echo "Hello, this is a workflow triggered by workflow_dispatch!"
-          echo "Component: ${{ inputs.component }}"
-          echo "GAM Trigger Repository: ${{ inputs.gam_trigger_repository }}"
-          echo "Workflow Run ID: ${{ inputs.gam_trigger_run_id }}"
-          echo " GAM Trigger Workflow Run: https://github.com/${{ inputs.gam_trigger_repository }}/actions/runs/${{ inputs.gam_trigger_run_id }}"
+          echo "This workflow was triggered by https://github.com/${{ inputs.gam_trigger_repository }}/actions/runs/${{ inputs.gam_trigger_run_id }}"
 
 
